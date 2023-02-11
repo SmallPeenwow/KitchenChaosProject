@@ -9,7 +9,6 @@ public class DeliveryCounter : BaseCounter
             if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
             {
                 // Only accepts Plates
-                Debug.Log(plateKitchenObject.GetKitchenObjectSO() + " testing here"); // Need to do some testing
                 DeliveryManager.Instance.DeliverRecipe(plateKitchenObject);
 
                 player.GetKitchenObject().DestroySelf();
